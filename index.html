@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tyler's Notes - HTML5 Learning Path</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Tyler's Notes - Learn HTML5 (Tiered Learning Path)</h1>
+        <button id="dark-mode-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+        <div id="user-section">
+            <p id="user-status"></p>
+            <button id="login-btn" onclick="showLogin()">Login</button>
+            <button id="signup-btn" onclick="showSignup()">Sign Up</button>
+            <button id="logout-btn" style="display: none;" onclick="logout()">Logout</button>
+        </div>
+    </header>
+
+    <section id="app-content">
+        <div id="tier-selection">
+            <h2>Select a Tier</h2>
+            <ul>
+                <li><button onclick="loadTier(1)">Tier 1: HTML5 Basics</button></li>
+                <li><button onclick="loadTier(2)">Tier 2: Media and Tables</button></li>
+                <li><button onclick="loadTier(3)">Tier 3: Forms and Inputs</button></li>
+                <li><button onclick="loadTier(4)">Tier 4: Semantics and Structure</button></li>
+                <li><button onclick="loadTier(5)">Tier 5: Multimedia and Graphics</button></li>
+            </ul>
+        </div>
+        <div id="lesson-content" style="display: none;">
+            <h2 id="lesson-title"></h2>
+            <div id="lesson-body"></div>
+            <button onclick="goBackToTiers()">Back to Tiers</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Tyler's Notes Learning Platform. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
